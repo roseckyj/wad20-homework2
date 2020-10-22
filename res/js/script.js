@@ -8,10 +8,6 @@ function registerEventListeners() {
     $("#avatar").click(() => {
         $("#menu").toggle();
     })
-
-    $("#menu").on("blur", () => {
-        $("#menu").hide();
-    })
 }
 
 function updateUserInfo() {

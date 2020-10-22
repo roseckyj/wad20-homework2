@@ -223,3 +223,8 @@ nav div.avatar-container {
 #avatar {
     cursor: pointer;
 }
+
+.loading {
+    margin-lefT: 50%;
+    transform: translate(-50%, 0);
+}
