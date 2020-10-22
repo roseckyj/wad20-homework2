@@ -5,7 +5,6 @@ $(function () {
 
 function updatPostsInfo() {
     getPosts().then((data) => {
-        console.log(data);
         const postData = data.map((row) => {
             let media = ""
             if (row.media) {
