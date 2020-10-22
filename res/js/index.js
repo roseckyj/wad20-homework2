@@ -38,5 +38,7 @@ function updatPostsInfo() {
             </div>`
         }).join("")
         $(".main-container").html(postData)
+
+        $(".like-button").click(function () {$(this).toggleClass("liked")})
     });
 }
