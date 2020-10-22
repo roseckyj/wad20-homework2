@@ -1,14 +1,24 @@
 $(function () {
+    registerEventListeners();    
     updateUserInfo();
     updatPostsInfo();
 });
 
+function registerEventListeners() {
+    $("#avatar").click(() => {
+        $("#menu").toggle();
+    })
+
+    $("#menu").on("blur", () => {
+        $("#menu").hide();
+    })
+}
+
 function updateUserInfo() {
     getUserInfo().then((data) => {
-        console.log(data);
-        $(".avatar-container .avatar").attr("src", data.avatar);
-
-        // TODO: update also the menu
+        $("#avatar").attr("src", data.avatar);
+        $("#name").text(data.firstname + " " + data.lastname);
+        $("#email").text(data.email);
     });
 }
 

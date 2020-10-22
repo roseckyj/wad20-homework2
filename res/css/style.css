@@ -203,10 +203,23 @@ nav div.avatar-container {
     background-color: #01579b;
 }
 
-.menu {
+#menu {
     position: fixed;
     top: 50px;
     right: 0;
-    width: 200px;
+    min-width: 200px;
     background-color: white;
+    display: none;
+}
+
+#menu .menu-group {
+    padding: 10px;
+}
+
+#menu .menu-group:not(:last-child) {
+    border-bottom: solid 1px lightgray;
+}
+
+#avatar {
+    cursor: pointer;
 }
