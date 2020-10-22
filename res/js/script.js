@@ -1,3 +1,16 @@
+$(function () {
+    updateUserInfo();
+});
+
+function updateUserInfo() {
+    getUserInfo().then((data) => {
+        console.log(data);
+        $(".avatar-container .avatar").attr("src", data.avatar);
+
+        // TODO: update also the menu
+    });
+}
+
 // ================= API ===================
 
 async function getUserInfo() {
